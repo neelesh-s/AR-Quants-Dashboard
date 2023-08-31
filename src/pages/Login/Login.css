@@ -15,7 +15,8 @@
     height: 100vh;
     display: flex;
     position: relative;
-    overflow: hidden;
+    overflow: auto; 
+    /* set the overflow from hidden to auto inorder to ensure the scrollability of webpage till the content*/
 }
 
 
@@ -97,6 +98,8 @@
     align-items: center;
     width: 40%;
     background-color: #5055C4;
+    overflow-y: auto;
+    /* mobile responsive overflow issue solved by including overflow vertical to auto */
 }
 
 .custom-form-child {
