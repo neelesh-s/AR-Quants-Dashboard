@@ -58,9 +58,11 @@ const Navbar = () => {
                 {
                     data && data.map((item, index) => (
                         <div>
-                            <div className='icons'>
+                            {/* added d-flex here */}
+                            <div className='icons d-flex'>
                                 {index === 0 ? <span style={{ backgroundColor: "#201b6c", color: "#fff", fontSize: "12px", borderRadius: "50%", padding: "5px" }}>{item.icon}</span> : index === 1 ? <span style={{ backgroundColor: "#447c45", borderRadius: "50%", padding: "2px 4px" }}>{item.icon}</span> : index === 2 ? <span>{item.icon}</span> : ""}
-                                <span>{item.name} </span></div>
+                                {/* gave fontsize to name */}
+                                <span style={{fontSize:"18px"}}>{item.name} </span></div>
                             <div className='name'>({item.rate} + <span> {item.green} )</span></div>
                         </div>
                     ))
