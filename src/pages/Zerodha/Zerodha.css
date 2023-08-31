@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Dancing+Script&family=Playball&family=Poppins:wght@500&display=swap');
+
+p {
+    color: #242424;
+    font-family: Poppins;
+    font-size: 19.674px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.custom-footer{
+    padding: 30px 0px;
+}
+
+@media (max-width:992px) {
+    .custom-footer{
+        padding: 0px 0px;
+    }
+}
