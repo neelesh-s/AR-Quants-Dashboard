@@ -8,6 +8,7 @@ import UserAuthentication from "./pages/UserAuthenticate/UserAuthentication";
 import UserNuvama from "./pages/UserNuvama/UserNuvama";
 import Zerodha from "./pages/Zerodha/Zerodha";
 import KeyAuthentication from "./pages/KeyAuthentication/KeyAuthentication";
+import BackTest from "./pages/BackTest/BackTest";
 function App() {
   return (
     <BrowserRouter>
@@ -19,6 +20,8 @@ function App() {
         <Route path="user-nuvama" element={<UserNuvama />} />
         <Route path="user-zerodha" element={<Zerodha />} />
         <Route path="key-authentiaction" element={<KeyAuthentication/>} />
+        <Route path="BackTest" element={<BackTest/>}/>
+
 
       </Routes>
     </BrowserRouter>
