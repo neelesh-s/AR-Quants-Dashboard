@@ -5,7 +5,8 @@ import Header from '../../components/Header';
 import { AiOutlineSearch } from 'react-icons/ai';
 import { DeleteOutlineTwoTone, Login } from '@mui/icons-material';
 import AddCircleIcon from '@mui/icons-material/AddCircle';
-
+import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
+import EastOutlinedIcon from '@mui/icons-material/EastOutlined';
 
 
 
@@ -67,15 +68,15 @@ function BackTest() {
                     <Header />
                 </div>
 
-                <div className="div-one mt-8 md:mx-4 lg:mx-10 flex flex-col w-full ">
+                <div className="div-one md:mt-8 md:mx-4 lg:mx-10 flex flex-col w-full relative">
 
 
-                    <div className='div-two md:mt-10 mt-4 md:mx-10 '>
-                        <div className='md:mx-8 p-4 flex flex-col '>
-                            <h1 className='text-gray-900 flex items-center justify-center lg:justify-start font-poppins text-4xl font-medium '>Backtest </h1>
-                            <p className='text-gray-600 font-poppins text-sm font-normal leading-normal py-2 md:block hidden' >Backtest your trading ideas using historical data to gauge their potential performance. Analyze how your strategy would have performed in the past to make informed decisions for the future.
+                    <div className='div-two md:mt-10 md:mx-10  '>
+                        <div className='md:mx-8 p-4 flex flex-col md:mb-0 mb-8'>
+                            <h1 className='text-gray-900 flex items-center justify-center my-1 lg:justify-start font-poppins text-4xl font-medium '>Backtest </h1>
+                            <p className='text-gray-600 font-poppins text-sm font-normal my-1 leading-normal py-2 md:block hidden' >Backtest your trading ideas using historical data to gauge their potential performance. Analyze how your strategy would have performed in the past to make informed decisions for the future.
                                 Fine-tune your approach and gain valuable insights with thorough backtesting.</p>
-                            <div className='flex flex-col lg:flex-row w-full'>
+                            <div className='flex flex-col lg:flex-row my-1 w-full'>
                                 <div className="flex flex-col md:flex-row justify-center items-start lg:items-center md:space-x-4 lg:w-1/2 w-full border-r-gray-900 h-full">
                                     <div className="text-xl font-['Poppins'] my-2 font-medium text-[#242424] ">
                                         Chart type
@@ -124,12 +125,12 @@ function BackTest() {
                                     </div>
                                 </div>
                             </div>
-                            <div className='flex flex-col lg:flex-row lg:justify-start  lg:w-full w-full '>
+                            <div className='flex flex-col my-1 lg:flex-row lg:justify-start  lg:w-full w-full '>
                                 <div className="text-xl my-2 font-['Poppins'] font-medium text-[#242424] lg:w-1/5 left-0">
                                     Trade type
                                 </div>
 
-                                <div className="flex justify-evenly  lg:items-center lg:w-3/5 mb-2">
+                                <div className="flex justify-evenly my-1 lg:items-center lg:w-3/5 mb-2">
                                     <button
                                         className={`${actBut === 'Positional EQ' ? 'bg-yellow-500 text-white' : 'bg-white text-black'
                                             } p-1 text-base rounded-lg border border-transparent `}
@@ -159,7 +160,7 @@ function BackTest() {
                                         Intraday
                                     </button>
                                 </div>
-                                <div className="flex justify-evenly  lg:hidden ">
+                                <div className="flex justify-evenly  my-1 lg:hidden ">
                                     <button
                                         className={`${actBut === 'Options' ? 'bg-yellow-500 text-white' : 'bg-white text-black'
                                             } p-1 text-base rounded-lg border border-transparent `}
@@ -177,7 +178,7 @@ function BackTest() {
                                 </div>
 
                             </div >
-                            <div className='flex flex-col lg:flex-row lg:justify-start lg:items-center items-start lg:w-auto w-auto ' >
+                            <div className='flex flex-col my-1 lg:flex-row lg:justify-start lg:items-center items-start lg:w-auto w-auto ' >
                                 <div className="text-xl my-2 font-['Poppins'] font-medium text-[#242424] lg:w-1/2 left-0">
                                     Select Instrument
                                 </div>
@@ -196,7 +197,7 @@ function BackTest() {
 
 
                                 </div>
-                                <div className='flex flex-row items-center justify-center lg:justify-start w-full'>
+                                <div className='flex flex-row items-center my-1 justify-center lg:justify-start w-full'>
                                     <div className=' items-center justify-center inline-flex ml-4'>
                                         <input type="radio" id='radio-1' name='radio-1'
                                             onClick={handleRadio} className='hidden' value="radio-1" />
@@ -216,7 +217,7 @@ function BackTest() {
 
 
                             </div>
-                            <div className='w-full flex lg:flex-row flex-col'>
+                            <div className='w-full flex lg:flex-row my-1 flex-col'>
                                 <div className='flex flex-row  lg:justify-start justify-evenly lg:items-center mx-auto items-center lg:w-1/3 w-full ' >
                                     <div className="text-xl my-2 font-['Poppins'] font-medium text-[#242424] w-auto lg:left-0 ">
                                         Stirke selection
@@ -230,7 +231,7 @@ function BackTest() {
                                     </div>
 
                                 </div>
-                                <div className='flex lg:flex-row justify-evenly lg:justify-start items-center lg:w-1/3 w-full'>
+                                <div className='flex lg:flex-row justify-evenly  lg:justify-start items-center lg:w-1/3 w-full'>
                                     <div className="text-xl my-2 font-['Poppins'] font-medium text-[#242424] ">Option Type</div>
                                     <div className=' items-center justify-center inline-flex ml-4'>
                                         <input type="radio" id='radio-3' name='radio-3'
@@ -248,7 +249,7 @@ function BackTest() {
                                     </div>
 
                                 </div>
-                                <div className='flex lg:flex-row justify-evenly lg:justify-start items-center lg:w-1/3 w-full'>
+                                <div className='flex lg:flex-row  justify-evenly lg:justify-start items-center lg:w-1/3 w-full'>
                                     <div className="text-xl my-2 font-['Poppins'] font-medium text-[#242424] ">Action Type</div>
                                     <div className=' items-center justify-center inline-flex ml-4'>
                                         <input type="radio" id='radio-3' name='radio-3'
@@ -267,7 +268,7 @@ function BackTest() {
 
                                 </div>
                             </div>
-                            <div className="flex flex-col md:flex-row justify-center items-start lg:items-center md:space-x-4 lg:w-1/2 w-full border-r-gray-900 h-full">
+                            <div className="flex my-1 flex-col md:flex-row justify-center items-start lg:items-center md:space-x-4 lg:w-1/2 w-full border-r-gray-900 h-full">
                                 <div className="text-xl font-['Poppins'] my-2 font-medium text-[#242424] ">
                                     Expiry type
                                 </div>
@@ -281,7 +282,8 @@ function BackTest() {
                         </div>
 
                     </div>
-                    <div className='div-two md:mt-10 mt-4 md:mx-10 '>
+                    <div className='div-two md:mt-10 mt-4 mb-8 md:mx-10 hidden md:block '>
+                        {/* this div is set to be only visible in medium and above screen and stays hidden for lower */}
                         <div className='md:mx-8 p-4 flex flex-col '>
                             <h1 className='text-gray-900 flex items-center justify-center lg:justify-start font-poppins text-2xl font-medium '>Create your strategy </h1>
                             <p className='text-gray-600 font-poppins text-sm font-normal leading-normal py-1 md:block hidden' >Formulate a strategy that suits your trading style. Personalize your entry signals, choose indicators, and configure risk management parameters.
@@ -568,7 +570,7 @@ function BackTest() {
                                 <div className=' text-blue-500 bg-white text-xl rounded-md shadow-xl inset-shadow w-auto px-4 py-2'>Long Straddle</div>
                                 <div className=' text-blue-500 bg-white text-xl rounded-md shadow-xl inset-shadow w-auto px-4 py-2'> Iron Condor</div>
                             </div>
-                            <div className='flex flex-row items-center justify-evenly my-2 w-full'>
+                            <div className='flex flex-row items-center justify-evenly mt-2 mb-12 w-full'>
                                 <div className=' text-blue-500 bg-gray-200 text-xl rounded-md shadow-xl inset-shadow  h-10  w-1/5'></div>
                                 <div className=' text-blue-500 bg-gray-200 text-xl rounded-md shadow-xl inset-shadow  w-1/5 h-10 '></div>
                                 <div className=' text-blue-500 bg-gray-200 text-xl rounded-md shadow-xl inset-shadow  w-1/5 h-10'></div>
@@ -577,8 +579,16 @@ function BackTest() {
                         </div>
 
                     </div>
+                    <div className='bottom-5 right-5 z-2 space-x-2 items-center justify-center md:block hidden absolute w-auto bg-yellow-500 p-2 text-white  text-base rounded-full'>
+                        <div><RocketLaunchIcon/></div>
+                        <div>Launch Strategy </div>
+                    </div>
+                    <div className='bottom-5 right-5 z-2 space-x-2 items-center justify-center block md:hidden absolute w-auto bg-blue-500 p-2 text-white  text-lg rounded-md'>
+                        <div><EastOutlinedIcon /></div>
+                        
+                    </div>
+                    
                 </div>
-
 
             </div >
 
