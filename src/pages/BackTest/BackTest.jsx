@@ -24,16 +24,29 @@ function BackTest() {
     const [bRadio, setBRadio] = useState(null);
 
     const [divs, setDivs] = useState([]);
+    const [divs2,setDivs2] = useState([])
     // the above is for the add conditions button in entry conditions
     const addDiv = () => {
         setDivs([...divs, true]);
     };
+
+    const addDiv2 = () => {
+        setDivs2([...divs2, true]);
+    };
+
+
+    
     //   this above is to add a new div when onclicked on add conditions
 
     const deleteDiv = (index) => {
         const updatedDivs = [...divs];
         updatedDivs.splice(index, 1); // Remove the div2 at the specified index
         setDivs(updatedDivs);
+    }
+        const deleteDiv2 = (index1) => {
+            const updatedDivs2 = [...divs2];
+            updatedDivs2.splice(index1, 1); // Remove the div2 at the specified index
+            setDivs2(updatedDivs2);
     };
 
     //   above code is to delete div on clicked on bin icon
@@ -305,14 +318,14 @@ function BackTest() {
                                     <div className=''>
                                         When
                                     </div>
-                                    <div className='rounded-md border-yellow-500 bg-white w-auto px-6 '>
-                                        <select name="RSI" id="rsi" className=' border-yellow-900'>
+                                    <div className='rounded-md border-yellow-500 border-2 bg-white w-auto px-2 '>
+                                        <select name="RSI" id="rsi" className=' border-yellow-500'>
                                             <option selected className='text-black text-base font-normal'>RSI
                                             </option>
                                         </select>
                                     </div>
                                     <div className='border rounded-md w-auto bg-white '>
-                                        <select name="c" id="c" className=' px-4 border-yellow-900'>
+                                        <select name="c" id="c" className=' px-4 border-yellow-500 border-2'>
                                             <option selected className='text-black text-base font-normal'>crosses above
                                             </option>
                                             <option value="Below">Below</option>
@@ -320,7 +333,7 @@ function BackTest() {
 
 
                                     </div>
-                                    <div className='rounded-md flex border bg-white border-solid border-yellow-500 px-6 items-center justify-center w-40'>
+                                    <div className='rounded-md flex border-2 bg-white border-solid border-yellow-500  items-center justify-center w-auto'>
                                         <input type="number" id="numericalInput" name="quantity" placeholder='enter value'>
                                         </input>
 
@@ -337,39 +350,39 @@ function BackTest() {
                                     <button onClick={() => setBackgr(1)} className={`p-1 rounded-r-lg text-base ${backgr === 1 ? 'bg-yellow-500 text-white' : 'bg-white text-black'} focus:outline-none font-thin border   border-transparent`}>OR</button>
                                 </div>
                                 <div className='inline-flex flex-row justify-evenly w-full mt-4'>
-                                            <div className=''>
-                                                When
-                                            </div>
-                                            <div className='rounded-md border-yellow-500 border bg-white w-auto '>
-                                                <select name="none" id="none" className='px-6 border-yellow-900'>
-                                                    <option selected className='text-white text-base font-normal'>
-                                                    </option>
-                                                    <option value="rssi">RSI</option>
-                                                </select>
-                                            </div>
-                                            <div className='border rounded-md w-auto bg-white '>
-                                                <select name="empty" id="empty" className=' px-4 border-yellow-900'>
-                                                    <option selected className='text-white text-base font-normal '>
-                                                    </option>
-                                                    <option value="above">crosses above
-                                                    </option>
-                                                    <option value="Below">Below</option>
+                                    <div className=''>
+                                        When
+                                    </div>
+                                    <div className='rounded-md border-yellow-500 border bg-white w-auto '>
+                                        <select name="none" id="none" className='px-2 border-2 border-yellow-500'>
+                                            <option selected className='text-white text-base font-normal'>
+                                            </option>
+                                            <option value="rssi">RSI</option>
+                                        </select>
+                                    </div>
+                                    <div className='border rounded-md w-auto bg-white '>
+                                        <select name="empty" id="empty" className=' px-4 border-2 border-yellow-500'>
+                                            <option selected className='text-white text-base font-normal '>
+                                            </option>
+                                            <option value="above">crosses above
+                                            </option>
+                                            <option value="Below">Below</option>
 
-                                                </select>
+                                        </select>
 
 
-                                            </div>
-                                            <div className='rounded-md flex border bg-white border-solid border-yellow-500  items-center justify-center '>
-                                                <input type="number" id="numericalInput" name="quantity" placeholder='enter value'>
-                                                </input>
-                                            </div>
-                                            <div className='text-blue-600' 
-                                            ><DeleteOutlineTwoTone />
+                                    </div>
+                                    <div className='rounded-md flex border-2 bg-white border-solid border-yellow-500  items-center justify-center '>
+                                        <input type="number" id="numericalInput" name="quantity" placeholder='enter value'>
+                                        </input>
+                                    </div>
+                                    <div className='text-blue-600'
+                                    ><DeleteOutlineTwoTone />
 
-                                            </div>
+                                    </div>
 
-                                        </div>
-                                
+                                </div>
+
                                 {divs.map((isDivOpen, index) => (
                                     <div key={index} className=" p-2 mb-2">
 
@@ -379,14 +392,14 @@ function BackTest() {
                                                 When
                                             </div>
                                             <div className='rounded-md border-yellow-500 border bg-white w-auto '>
-                                                <select name="none" id="none" className='px-6 border-yellow-900'>
+                                                <select name="none" id="none" className='px-2 border-yellow-500 border-2'>
                                                     <option selected className='text-white text-base font-normal'>
                                                     </option>
                                                     <option value="rssi">RSI</option>
                                                 </select>
                                             </div>
                                             <div className='border rounded-md w-auto bg-white '>
-                                                <select name="empty" id="empty" className=' px-4 border-yellow-900'>
+                                                <select name="empty" id="empty" className=' px-4 border-yellow-500 border-2'>
                                                     <option selected className='text-white text-base font-normal '>
                                                     </option>
                                                     <option value="above">crosses above
@@ -397,7 +410,7 @@ function BackTest() {
 
 
                                             </div>
-                                            <div className='rounded-md flex border bg-white border-solid border-yellow-500  items-center justify-center '>
+                                            <div className='rounded-md flex  bg-white border-solid border-yellow-500 border-2 items-center justify-center '>
                                                 <input type="number" id="numericalInput" name="quantity" placeholder='enter value'>
                                                 </input>
                                             </div>
@@ -438,14 +451,14 @@ function BackTest() {
                                     <div className=''>
                                         When
                                     </div>
-                                    <div className='rounded-md border-yellow-500 bg-white w-auto px-6 '>
-                                        <select name="RSI" id="rsi" className=' border-yellow-900'>
+                                    <div className='rounded-md border-yellow-500  bg-white w-auto  '>
+                                        <select name="RSI" id="rsi" className=' border-yellow-500 border-2 px-2'>
                                             <option selected className='text-black text-base font-normal'>RSI
                                             </option>
                                         </select>
                                     </div>
                                     <div className='border rounded-md w-auto bg-white '>
-                                        <select name="c" id="c" className=' px-4 border-yellow-900'>
+                                        <select name="c" id="c" className=' px-4 border-yellow-500 border-2 rounded-md' >
                                             <option selected className='text-black text-base font-normal'>crosses above
                                             </option>
                                             <option value="Below">Below</option>
@@ -453,7 +466,7 @@ function BackTest() {
 
 
                                     </div>
-                                    <div className='rounded-md flex border bg-white border-solid border-yellow-500 px-6 items-center justify-center w-40'>
+                                    <div className='rounded-md flex  bg-white border-2 border-yellow-500  items-center justify-center w-auto'>
                                         <input type="number" id="numericalInput" name="quantity" placeholder='enter value'>
                                         </input>
 
@@ -465,89 +478,107 @@ function BackTest() {
 
                                 </div>
                                 <div className='flex flex-row '>
-                                <div className="flex  my-1 h-auto w-auto rounded-lg  items-center left-0">
+                                    <div className="flex  my-1 h-auto w-auto rounded-lg  items-center left-0">
 
-                                    <button onClick={() => setBackgr(0)} className={`p-1 rounded-l-lg text-base ${backgr === 0 ? 'bg-yellow-500 text-white' : 'bg-white text-black'}  focus:outline-none font-thin border border-transparent`}>AND</button>
-                                    <button onClick={() => setBackgr(1)} className={`p-1 rounded-r-lg text-base ${backgr === 1 ? 'bg-yellow-500 text-white' : 'bg-white text-black'} focus:outline-none font-thin border   border-transparent`}>OR</button>
+                                        <button onClick={() => setBackgr(0)} className={`p-1 rounded-l-lg text-base ${backgr === 0 ? 'bg-yellow-500 text-white' : 'bg-white text-black'}  focus:outline-none font-thin border border-transparent`}>AND</button>
+                                        <button onClick={() => setBackgr(1)} className={`p-1 rounded-r-lg text-base ${backgr === 1 ? 'bg-yellow-500 text-white' : 'bg-white text-black'} focus:outline-none font-thin border   border-transparent`}>OR</button>
+                                    </div>
+
                                 </div>
-                                <div className='text-blue-600 right-0' 
-                                            ><DeleteOutlineTwoTone />
-
-                                            </div>
-                                            </div>
                                 <div className='inline-flex flex-row justify-evenly w-full mt-4'>
-                                            <div className=''>
-                                                When
-                                            </div>
-                                            <div className='rounded-md border-yellow-500 border bg-white w-auto '>
-                                                <select name="none" id="none" className='px-6 border-yellow-900'>
-                                                    <option selected className='text-white text-base font-normal'>
-                                                    </option>
-                                                    <option value="rssi">RSI</option>
-                                                </select>
-                                            </div>
-                                            <div className='border rounded-md w-auto bg-white '>
-                                                <select name="empty" id="empty" className=' px-4 border-yellow-900'>
-                                                    <option selected className='text-white text-base font-normal '>
-                                                    </option>
-                                                    <option value="above">crosses above
-                                                    </option>
-                                                    <option value="Below">Below</option>
-
-                                                </select>
-
-
-                                            </div>
-                                            <div className='rounded-md flex border bg-white border-solid border-yellow-500  items-center justify-center '>
-                                                <input type="number" id="numericalInput" name="quantity" placeholder='enter value'>
-                                                </input>
-                                            </div>
-                                            
+                                    <div className='w-1/2 flex flex-row justify-center space-x-6 items-center'>
+                                        <div>
+                                            Target
+                                        </div>
+                                        <div>
+                                            <select name="" id="" className='w-auto px-2 border-2 border-yellow-500 rounded-md'>
+                                                <option type="numeric" value="" selected>10%</option>
+                                            </select>
 
                                         </div>
-                                
-                                {divs.map((isDivOpen, index) => (
-                                    <div key={index} className=" p-2 mb-2">
+                                        <div>
+                                            from entry
+                                        </div>
 
 
-                                        {isDivOpen && (<div className='inline-flex flex-row justify-evenly w-full mt-4'>
-                                            <div className=''>
-                                                When
+                                    </div>
+                                    <div className='w-1/2 flex flex-row justify-center space-x-6 items-center'>
+                                        <div>
+                                            Stop loss
+                                        </div>
+                                        <div>
+                                            <select name="" id="" className='w-auto px-2 border-2 border-yellow-500 rounded-md'>
+                                                <option value="" type="numeric" selected>10% </option>
+                                            </select>
+                                        </div>
+                                        <div>
+                                            from entry
+                                        </div>
+                                        <div className='text-blue-600' 
+                                        ><DeleteOutlineTwoTone />
+
+                                        </div>
+
+
+                                    </div>
+
+                                    
+
+
+                                </div>
+
+                                {divs2.map((isDiv2Open, index1) => (
+                                    <div key={index1} className=" p-2 mb-2">
+
+
+                                        {isDiv2Open && (
+                                        <div className='inline-flex flex-row justify-evenly w-full mt-4'>
+                                        <div className='w-1/2 flex flex-row justify-center space-x-6 items-center'>
+                                            <div>
+                                                Target
                                             </div>
-                                            <div className='rounded-md border-yellow-500 border bg-white w-auto '>
-                                                <select name="none" id="none" className='px-6 border-yellow-900'>
-                                                    <option selected className='text-white text-base font-normal'>
-                                                    </option>
-                                                    <option value="rssi">RSI</option>
+                                            <div>
+                                                <select name="" id="" className='w-auto px-2 border-2 border-yellow-500 rounded-md'>
+                                                    <option type="numeric" value="" selected></option>
+                                                </select>
+    
+                                            </div>
+                                            <div>
+                                                from entry
+                                            </div>
+    
+    
+                                        </div>
+                                        <div className='w-1/2 flex flex-row justify-center space-x-6 items-center'>
+                                            <div>
+                                                Stop loss
+                                            </div>
+                                            <div>
+                                                <select name="" id="" className='w-auto px-2 border-2 border-yellow-500 rounded-md'>
+                                                    <option value="" type="numeric" selected> </option>
                                                 </select>
                                             </div>
-                                            <div className='border rounded-md w-auto bg-white '>
-                                                <select name="empty" id="empty" className=' px-4 border-yellow-900'>
-                                                    <option selected className='text-white text-base font-normal '>
-                                                    </option>
-                                                    <option value="above">crosses above
-                                                    </option>
-                                                    <option value="Below">Below</option>
-
-                                                </select>
-
-
+                                            <div>
+                                                from entry
                                             </div>
-                                            <div className='rounded-md flex border bg-white border-solid border-yellow-500  items-center justify-center '>
-                                                <input type="number" id="numericalInput" name="quantity" placeholder='enter value'>
-                                                </input>
-                                            </div>
-                                            <div className='text-blue-600' onClick={() => deleteDiv(index)}
+                                            <div className='text-blue-600' onClick={() => deleteDiv2(index1)} 
                                             ><DeleteOutlineTwoTone />
-
+    
                                             </div>
-
-                                        </div>)}
+    
+    
+                                        </div>
+    
+                                        
+    
+    
+                                    </div>
+                                        )}
                                     </div>
                                 ))}
                                 <div>
                                     <button className='inline-block bg-yellow-500 my-4 ml-4 px-2 py-1 rounded min-w-auto items-center justify-center left-0'
-                                        onClick={addDiv}>
+                                        onClick={addDiv2}>
                                         <span className='mx-2'>
                                             <AddCircleIcon /></span>
                                         <span className='mr-2'>Add Conditions
@@ -558,8 +589,8 @@ function BackTest() {
                                 </div>
                             </div>
                             <div className='w-full flex flex-row mb-4 '>
-                               <div className='w-1/3 left-0'>Strategy Name </div> 
-                               <input type="text" className='border border-black w-1/3 left-0'/>
+                                <div className='w-1/3 left-0'>Strategy Name </div>
+                                <input type="text" className='border border-black w-1/3 left-0' />
 
                             </div>
                             <h1 className='text-gray-900 flex items-center justify-center lg:justify-start font-poppins text-2xl font-medium '>Select template </h1>
@@ -580,14 +611,16 @@ function BackTest() {
 
                     </div>
                     <div className='bottom-5 right-5 z-2 space-x-2 items-center justify-center md:block hidden absolute w-auto bg-yellow-500 p-2 text-white  text-base rounded-full'>
-                        <div><RocketLaunchIcon/></div>
-                        <div>Launch Strategy </div>
+                        <div className='inline-flex items-center justify-center'>
+                            <div><RocketLaunchIcon /></div>
+                            <div>Launch Strategy </div>
+                        </div>
                     </div>
                     <div className='bottom-5 right-5 z-2 space-x-2 items-center justify-center block md:hidden absolute w-auto bg-blue-500 p-2 text-white  text-lg rounded-md'>
                         <div><EastOutlinedIcon /></div>
-                        
+
                     </div>
-                    
+
                 </div>
 
             </div >
